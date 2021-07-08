@@ -34,7 +34,7 @@ jobs:
           imageName: ghcr.io/stuartleeks/devcontainer-build-run-demo-dev-container
           runCmd: make ci
           push: filter
-          refFilterForPush: refs/head/main
+          refFilterForPush: refs/heads/main
           eventFilterForPush: |
             push
             workflow_dispatch
