@@ -41,7 +41,7 @@ ENV DEVCONTAINER=true
 
 # golang
 COPY scripts/golang.sh /tmp/
-RUN /tmp/golang.sh
+RUN /tmp/golang.sh 1.16.5
 
 # Set up GOPATH
 ENV GOPATH /home/vscode/go
@@ -62,7 +62,7 @@ ARG DOCKER_GROUP_ID
 
 # docker-from-docker
 COPY scripts/docker-client.sh /tmp/
-RUN /tmp/docker-client.sh
+RUN /tmp/docker-client.sh 20.10.5
 
 # __DEVCONTAINER_SNIPPET_INSERT__ (control where snippets get inserted using the devcontainer CLI)
 
