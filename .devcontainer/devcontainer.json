@@ -3,19 +3,16 @@
 {
 	"name": "devcontainer-build-run-demo",
 	"dockerFile": "Dockerfile",
-
 	"mounts": [
 		// Keep command history 
 		"source=devcontainer-build-run-demo-bashhistory,target=/home/vscode/commandhistory",
 		// Mount host docker socket
 		"type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock"
-	
 	],
-
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
+	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash",
-		"files.eol": "\n", 
+		"files.eol": "\n",
 		"go.useLanguageServer": true,
 		"[go]": {
 			"editor.snippetSuggestions": "none",
@@ -43,18 +40,13 @@
 			"debugAdapter": "legacy"
 		}
 	},
-	
 	// Add the IDs of extensions you want installed when the container is created.
 	// "extensions": [],
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "echo hello",
-
 	"remoteUser": "vscode",
-	
 	"extensions": [
 		"golang.go",
 		"stuartleeks.vscode-go-by-example",
@@ -66,5 +58,7 @@
 			// matches the group ID on the host, add this to your .bash_profile on the host
 			// 		export DOCKER_GROUP_ID=$(getent group docker | awk -F ":" '{ print $3 }')
 			"DOCKER_GROUP_ID": "${localEnv:DOCKER_GROUP_ID}"
-		}
-	},}
+		},
+		"cacheFrom": "ghcr.io/stuartleeks//devcontainer-build-run-demo-dev-container"
+	},
+}
