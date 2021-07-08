@@ -11,5 +11,6 @@ docker-run: docker-build
 
 ci: docker-build
 # Lazily using 'latest' tag rather than versioned images...
+	docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} ghcr.io
 	docker tag devcontainer-build-run-demo ${IMAGE_NAME}
 	docker push ${IMAGE_NAME}
