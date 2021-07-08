@@ -28,7 +28,7 @@ jobs:
       - name: Build and run dev container task
         uses: stuartleeks/devcontainer-build-run@v0.1
         with:
-          imageName: ghcr.io/stuartleeks/devcontainer-build-run-demo/dev-container
+          imageName: ghcr.io/stuartleeks/devcontainer-build-run-demo-dev-container
           runCmd: make ci
           push: filter
           refFilterForPush: refs/head/main

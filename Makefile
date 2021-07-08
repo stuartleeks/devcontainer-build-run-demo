@@ -1,4 +1,4 @@
-IMAGE_NAME=ghcr.io/stuartleeks/devcontainer-build-run-demo/app
+IMAGE_NAME=ghcr.io/stuartleeks/devcontainer-build-run-demo
 
 run:
 	@go run main.go
